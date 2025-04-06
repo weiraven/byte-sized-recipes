@@ -40,6 +40,10 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
+## Live Demo
+
+[View the live site on Netlify](https://67f1feb74767c4fa7cacac0e--wonderful-puppy-ebbe72.netlify.app/)
+
 ## Notes
 
 Describe any challenges encountered while building the app.
