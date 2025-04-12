@@ -40,7 +40,7 @@ GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Live Demo
 
-[View the live site on Netlify](https://wonderful-puppy-ebbe72.netlify.app/)
+[View the live site on Netlify](https://bytesizedrecipes.netlify.app/)
 
 ## License
 
