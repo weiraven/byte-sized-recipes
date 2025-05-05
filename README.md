@@ -1,34 +1,50 @@
-# Web Development Project 6 - *Byte-Sized Recipes*
+# Byte‑Sized Recipes
 
-Submitted by: **Raven Wei**
+An interactive dashboard for discovering and filtering recipes at a glance. Built with Vite + React, this app fetches random recipes from the Spoonacular Food API and provides powerful search, filtering, and chart visualizations.
 
-This web app: **Data dashboard that delivers easily digestible bytes of popular recipes.**
+## Overview
 
-Time spent: **6** hours spent in total
+Users can:
 
-## Required Features
+* Fetch batches of 10 random recipes (up to 30 stored in session during each visit)
+* Search across all recipe data fields
+* Filter by dish type, prep time, vegan, and gluten‑free options
+* View summary statistics: total fetched, average ready time, displayed count, most popular recipe
+* Click on any recipe to see a detail view with servings, source link, tags, and ingredients
+* Explore interactive charts (dish‑type distribution as a pie chart; score trend as a line chart) in a collapsible sidebar
 
-The following **required** functionality is completed:
+## Tech Stack & Prerequisites
 
-- [x] **Clicking on an item in the list view displays more details about it**
-  - Clicking on an item in the dashboard list navigates to a detail view for that item
-  - Detail view includes extra information about the item not included in the dashboard view
-  - The same sidebar is displayed in detail view as in dashboard view
-  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
-- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
-  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
-- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
-  - At least two charts should be incorporated into the dashboard view of the site
-  - Each chart should describe a different aspect of the dataset
+* **Framework:** Vite + React
+* **Routing:** React Router v6
+* **Data Fetching:** Axios
+* **Charts:** Chart.js + react‑chartjs‑2
+* **API Key:** Spoonacular Food API (set `VITE_SPOONACULAR_API_KEY` in `.env`)
 
-The following **optional** features are implemented:
+## Key Features
 
-- [x] The site’s customized dashboard contains more content that explains what is interesting about the data 
-  - e.g., an additional description, graph annotation, suggestion for which filters to use, or an additional page that explains more about the data
-  
-The following **additional** features are implemented:
+* **Random Recipe Fetching**: Get 10 new recipes on demand, with session‑based persistence
+* **Global Search & Filters**: Search all recipe properties, filter by dish type, prep time slider, vegan & gluten‑free
+* **Summary Stat Cards**: Total fetched, average ready time, displayed count, top‑scored recipe
+* **Detail View**: Full recipe information fetched via `/recipes/{id}/information`, including ingredients and tags
+* **Collapsible Charts Sidebar**: Pie chart for dish‑type distribution; line chart for Spoonacular score trend
 
-* [x] Retractable drawer/sidebar component to hold the charts.
+## File Structure
+
+```
+src/
+├─ components/
+│  ├─ RecipeList.jsx       # Dashboard and list view
+│  ├─ RecipeDetail.jsx     # Detail view for individual recipes
+│  ├─ Navigation.jsx       # Top navbar with links
+│  ├─ ViewedRecipes.jsx    # List of recipes viewed this session
+│  ├─ DashboardCharts.jsx  # Chart components
+│  └─ ChartSidebar.jsx     # Collapsible sidebar for charts
+├─ App.jsx                 # Main router and layout
+├─ main.jsx                # Vite entry point
+├─ App.css                 # Global and component styles
+└─ .env                    # Environment variables (not committed)
+```
 
 ## Video Walkthrough
 
@@ -37,10 +53,6 @@ Here's a walkthrough of implemented user stories:
 <img src='https://github.com/weiraven/byte-sized-recipes/blob/main/public/images/bsr-demo2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
-
-## Live Demo
-
-[View the live site on Netlify](https://bytesizedrecipes.netlify.app/)
 
 ## License
 
